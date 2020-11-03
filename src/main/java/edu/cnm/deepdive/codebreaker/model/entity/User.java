@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.codebreaker.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -63,17 +64,20 @@ public class User {
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "originator", cascade = CascadeType.ALL,
       orphanRemoval = true)     /* mappedBy = field name, not column name */
   @OrderBy("started DESC")
+  @JsonIgnore
   private final List<Match> matchesOriginated = new LinkedList<>();
 
   @NonNull
   @OneToMany(mappedBy = "winner", fetch = FetchType.LAZY,
       cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
   @OrderBy("deadline DESC")
+  @JsonIgnore
   private final List<Match> matchesWon = new LinkedList<>();
 
   @NonNull
   @ManyToMany(mappedBy = "players", fetch = FetchType.LAZY)   /* this time was defined in User first */
   @OrderBy("deadline DESC")
+  @JsonIgnore
   private final List<Match> matches = new LinkedList<>();
 
 
@@ -88,6 +92,7 @@ public class User {
   }
 
   @NonNull
+  @JsonIgnore
   public String getOauthKey() {
     return oauthKey;
   }
