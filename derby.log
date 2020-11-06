@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Thu Nov 05 16:50:19 MST 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-9ad1-72a4-00001ec37c00 
+Fri Nov 06 09:16:07 MST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-9e57-fa67-00001ec0a9f0 
 on database directory C:\Users\jjara\Desktop\bootcamp\projects\codebreaker-service\codebreaker_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@368239c8 
 Loaded from file:/C:/Users/jjara/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Amazon.com Inc.
